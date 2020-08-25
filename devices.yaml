@@ -1,0 +1,19 @@
+devices:
+  - name: klima_temp_xy
+    maingroup: 1
+    middlegroup: 2
+    subgroup: 8
+    type: "DPT_9001"
+
+  - name: klima_status_xy
+    maingroup: 1
+    middlegroup: 2
+    subgroup: 5
+    type: "DPT_1001"
+
+  - name: temp_taster_mdt
+    maingroup: 13
+    middlegroup: 4
+    subgroup: 9
+    type: "DPT_9001"
+
