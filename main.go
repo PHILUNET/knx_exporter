@@ -23,18 +23,18 @@ type Config struct {
 }
 
 type DeviceConfig struct {
-	Name 		string		`yaml:"name"`
-	MainGroup 	uint8       `yaml:"maingroup"`
-	MiddleGroup uint8       `yaml:"middlegroup"`
-	SubGroup 	uint8       `yaml:"subgroup"`
-	Type  		string      `yaml:"type"`
+	Name 		string	`yaml:"name"`
+	MainGroup 	uint8	`yaml:"maingroup"`
+	MiddleGroup 	uint8   `yaml:"middlegroup"`
+	SubGroup 	uint8   `yaml:"subgroup"`
+	Type  		string  `yaml:"type"`
 }
 
 var (
 	showVersion   = flag.Bool("version", false, "Print version information.")
 	listenAddress = flag.String("listen-address", ":8080", "Address on which to expose metrics.")
 	metricsPath   = flag.String("path", "/metrics", "Path under which to expose metrics.")
-	gatewayAddr	  = flag.String("gateway-address", "192.168.1.144:3671", "IP and port from knx ip interface.")
+	gatewayAddr   = flag.String("gateway-address", "192.168.1.144:3671", "IP and port from knx ip interface.")
 	deviceConfig  = flag.String("devices", "devices.yaml", "File mapping knx addresses to prometheus")
 
 	tempMetric = prometheus.NewGaugeVec(prometheus.GaugeOpts{
